@@ -16,7 +16,51 @@
             background: #fff;
             line-height: 1.6;
         }
+    @media print {
+      body {
+        font-size: calc(16px + 3px); /* increase all fonts by 2px */
+      }
+    }
+    @media print {
+  html {
+    zoom: 1.05; /* slightly enlarge everything for print */
+  }
+}
+@media print {
+  @page {
+    margin: 0; /* removes default page margins */
+  }
+  body {
+    margin: 1cm; /* optional: add minimal margin for content */
+  }
+}
+@media print {
+  @page {
+    margin-top: 20px;   /* top margin */
+    margin-right: 20px; /* optional: right margin */
+    margin-bottom: 20px; /* optional: bottom margin */
+    margin-left: 20px;  /* optional: left margin */
+  }
 
+  body {
+    margin: 0; /* remove default body margin */
+  }
+}
+@media print {
+  .contact {
+    font-size: 19px; /* set your desired size */
+  }
+
+  .contact i {
+    font-size: 19px; /* optional: increase icon size too */
+  }
+
+  .contact a {
+    font-size: 19px; /* optional: increase link size */
+    text-decoration: none; /* optional: remove underline for cleaner print */
+    color: black; /* optional: make links black for print */
+  }
+}
         .contact {
             display: flex;
             flex-wrap: wrap;
@@ -211,8 +255,8 @@
             </div>
             <div class="contact-item">
                 <i class="fa-regular fa-circle-user"></i>
-                <a href="https://sivaiah1525.github.io/Resume-Template"
-                    target="_blank">https://sivaiah1525.github.io/Resume-Template</a>
+                <a href="https://sivaiah1525.github.io/Portfolio"
+                    target="_blank">https://sivaiah1525.github.io/Portfolio</a>
             </div>
         </div>
         </div>
